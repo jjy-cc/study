@@ -23,7 +23,7 @@ def bfs(x, y):
             nx = x + dx[i]
             ny = y + dy[i]
             #미로 찾기 공간 벗어난 경우 무시
-            if nx < 0 or ny < 0  or nx >= n or ny >= m:
+            if nx < 0 or ny < 0 or nx >= n or ny >= m:
                 continue
             #벽인 경우 무시
             if graph[nx][ny] == 0:
