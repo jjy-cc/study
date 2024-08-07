@@ -5,7 +5,7 @@ def possible(answer):
             if y == 0 or [x - 1, y, 1] in answer or [x, y, 1] in answer or [x, y - 1, 0] in answer:
                 continue
             return False
-        elif sutff == 1:
+        elif stuff == 1:
             # 한쪽 끝부분이 기둥 위, 혹은 양쪽 끝 부분이 다른 보와 동시에 연결이라면 정상
             if [x, y - 1, 0] in answer or [x + 1, y - 1, 0] in answer or (
                     [x - 1, y, 1] in answer and [x + 1, y, 1] in answer):
