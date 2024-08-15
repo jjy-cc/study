@@ -19,12 +19,12 @@ def solution(n, build_frame):
 
     for frame in build_frame:
         x, y, stuff, operate = frame
-        if operate == 0:
-            answer.remove([x, y, stuff])
-            if not possible(answer):
-                answer.append([x, y, stuff])
-        elif operate == 1:
-            answer.append([x, y, stuff])
-            if not possible(answer):
-                answer.append([x, y, stuff])
+        if operate == 0: #삭제 하는 경우
+            answer.remove([x, y, stuff]) #일단 삭제
+            if not possible(answer): #가능?
+                answer.append([x, y, stuff]) #아니면 다시 설치
+        elif operate == 1: #설치 하는 경우
+            answer.append([x, y, stuff]) #일단 설치
+            if not possible(answer): #가능?
+                answer.append([x, y, stuff]) #설치
     return sorted(answer)
